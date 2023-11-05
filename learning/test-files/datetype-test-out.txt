@@ -1,0 +1,43 @@
+command: Initialize
+date successfully created
+date successfully created
+error: month is invalid (0)
+error: month is invalid (32)
+error: year is invalid (1492)
+
+
+command: GetMonth
+month: 1
+
+
+command: GetMonthAsString
+month as string: January
+month as string: December
+
+
+command: GetDay
+day: 29
+day: 31
+
+
+command: GetYear
+year: 1583
+year: 2100
+
+
+command: CompareTo
+comparison result: 1
+comparison result: 1
+comparison result: 1
+comparison result: 1
+comparison result: -1
+comparison result: 0
+
+
+command: Adjust
+adjusted date: 3 1 2007
+adjusted date: 2 3 2000
+adjusted date: 2 3 2100
+adjusted date: 2 3 1964
+
+
