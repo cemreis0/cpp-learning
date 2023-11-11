@@ -1,6 +1,0 @@
-Denominator: 3
-Numerator: 5
-Fraction is not zero
-Fraction is not properWhole number is 1
-Denominator: 3
-Numerator: 2

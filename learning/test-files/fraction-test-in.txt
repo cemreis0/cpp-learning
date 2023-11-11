@@ -1,7 +1,0 @@
-Initialize
-GetDenominator
-GetNumerator
-IsZero
-IsNotProper
-ConvertToProper
-Quit
