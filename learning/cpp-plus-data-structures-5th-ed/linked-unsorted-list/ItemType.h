@@ -1,4 +1,4 @@
-// cpp-plus-data-structures-5th-ed/linked-unsorted-list/ItemType.h
+// cpp-plus-data-structures-5th-ed/unsorted-list/ItemType.h
 
 #pragma once
 

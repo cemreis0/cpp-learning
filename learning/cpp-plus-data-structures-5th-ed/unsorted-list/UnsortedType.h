@@ -21,6 +21,6 @@ class UnsortedType
         ItemType getNextItem();
     private:
         int length;
-        ItemType info[MAX_ITEMS];
+        ItemType info[MAX_ITEMS]; // array
         int currentPos;
 };
