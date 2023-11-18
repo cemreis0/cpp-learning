@@ -1,4 +1,4 @@
-// cpp-plus-data-structures-5th-ed/linked-unsorted-list/ItemType.cpp
+// cpp-plus-data-structures-5th-ed/unsorted-list/ItemType.cpp
 
 #include "ItemType.h"
 #include <stdexcept>
@@ -14,7 +14,7 @@ int ItemType::comparedTo(ItemType item) const
     if (value < item.value) return -1;
     else if (value > item.value) return 1;
     else if (value == item.value) return 0;
-    else throw std::invalid_argument("error comparing items");
+    else throw std::invalid_argument("An error occured comparing items.");
 }
 
 void ItemType::print(std::ofstream &out) const
