@@ -147,9 +147,9 @@ ItemType LinkedSortedType::getNextItem()
 {
     ItemType item;
     if (currentPos == nullptr)
-        currentPost = listData;
+        currentPos = listData;
     item = currentPos->info;
-    currentPost = currentPost-> next;
+    currentPos = currentPos-> next;
     return item;
 }
 
