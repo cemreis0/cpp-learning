@@ -124,7 +124,7 @@ bool binarySearch(ItemType info[], ItemType item, int fromLocation, int toLocati
 
 
 // recursive versions of putItem and deleteItem
-// putItem
+// insertItem
 template<class ItemType>
 void insertItem(NodeType<ItemType>*& listPtr, ItemType item)
 {
