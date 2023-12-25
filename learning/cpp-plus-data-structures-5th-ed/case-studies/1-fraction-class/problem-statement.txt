@@ -1,0 +1,1 @@
+Write and test a C++ class that represents a fraction.

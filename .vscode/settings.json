@@ -6,6 +6,7 @@
         "type_traits": "cpp",
         "utility": "cpp",
         "ostream": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "iostream": "cpp"
     }
 }
