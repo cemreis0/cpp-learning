@@ -2,27 +2,33 @@
 
 #include "UnsortedType.h"
 
-UnsortedType::UnsortedType()
+template<class ItemType>
+UnsortedType<ItemType>::UnsortedType()
+{
+    length = 0;
+    currentPos = -1;
+}
+
+template<class ItemType>
+void UnsortedType<ItemType>::makeEmpty()
 {
     length = 0;
 }
 
-void UnsortedType::makeEmpty()
-{
-    length = 0;
-}
-
-bool UnsortedType::isFull()
+template<class ItemType>
+bool UnsortedType<ItemType>::isFull()
 {
     return (length == MAX_ITEMS);
 }
 
-int UnsortedType::getLength()
+template<class ItemType>
+int UnsortedType<ItemType>::getLength()
 {
     return length;
 }
 
-ItemType UnsortedType::getItem(ItemType item, bool &found)
+template<class ItemType>
+ItemType UnsortedType<ItemType>::getItem(ItemType item, bool &found)
 {
     bool moreToSearch;
     int location = 0;
@@ -35,25 +41,27 @@ ItemType UnsortedType::getItem(ItemType item, bool &found)
         switch (item.comparedTo(info[location]))
         {
             case -1:
-            case 1: location ++;
-                    moreToSearch = (location < length);
-                    break;
+            case 1: location++;
+                moreToSearch = (location < length);
+                break;
             case 0: found = true;
-                    item = info[location];
-                    break;
+                item = info[location];
+                break;
         }
     }
 
     return item;
 }
 
-void UnsortedType::putItem(ItemType item)
+template<class ItemType>
+void UnsortedType<ItemType>::putItem(ItemType item)
 {
     info[length] = item;
     length++;
 }
 
-void UnsortedType::deleteItem(ItemType item)
+template<class ItemType>
+void UnsortedType<ItemType>::deleteItem(ItemType item)
 {
     int location = 0;
 
@@ -62,16 +70,22 @@ void UnsortedType::deleteItem(ItemType item)
         location++;
     }
 
-    info[location] = info[length-1];
-    length - 1;
+    info[location] = info[length - 1];
+    length--;
 }
 
-void UnsortedType::resetList(){
+template<class ItemType>
+void UnsortedType<ItemType>::resetList()
+{
     currentPos = -1;
 }
 
-ItemType UnsortedType::getNextItem()
+template<class ItemType>
+ItemType UnsortedType<ItemType>::getNextItem()
 {
     currentPos++;
     return info[currentPos];
 }
+
+// Explicit instantiation of the template for the specific ItemType
+template class UnsortedType<ItemType>;

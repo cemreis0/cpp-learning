@@ -7,6 +7,7 @@
 
 #include "ItemType.h"
 
+template<class ItemType>
 class UnsortedType
 {
     public:

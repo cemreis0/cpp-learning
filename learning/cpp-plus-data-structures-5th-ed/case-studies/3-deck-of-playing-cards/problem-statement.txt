@@ -1,0 +1,2 @@
+Write and test a C++ class that represents a card that allows to simulate a deck of 52 playing cards,
+consisting of four suits with 13 values. Create a deck class that retains the card class instances.
